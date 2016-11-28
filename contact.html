@@ -9,7 +9,12 @@
         <link rel="stylesheet" type="text/css" href="css/css.css">
         <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
         <script type="text/javascript" src="js/js.js"></script>
-      
+      <style>
+       #map {
+        height: 450px;
+        width: 50%;
+       }
+    </style>
   </head>
     
     <body>
@@ -77,12 +82,25 @@
             </div>
         
         
+        <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 52.6611857, lng: -8.625734899999998};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa5X180wb_4XYKPQPHm6xSyB_T5aB9E_Q&callback=initMap">
+    </script>
         
-        
-        <div class="map">
-        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:520px;width:500px;'><div id='gmap_canvas' style='height:450px;width:500px;'></div><div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(52.6680204,-8.630497500000047),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.6680204,-8.630497500000047)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>Limerick, Ireland <br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-        </div>
-        </div>
+      
         
      
 
