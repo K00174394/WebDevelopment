@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Eye Palletes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+</style>
+        <link rel="stylesheet" type="text/css" href="css/css.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+        
+      
+  </head>
+    
+    <body>
+        
+         <div class="header">
+             
+        <header>
+            <img src="img/Banner.png" alt="Banner"/> 
+         <div class="navbar">
+        <a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="brands.html">Brands</a>
+                <div class="dropdown">
+                     <span><a href="makeup.html">Make Up</a></span>
+                    <div class="dropdown-content">
+                        <p><a href="face.html">Face Care</a></p>
+                        <p><a href="eyes.html">Eye Palletes</a></p>
+                        <p><a href="lowcost.html">Low Cost Makeup</a></p>
+                        <p><a href="animalcruelty.html">Animal Cruelty</a></p>
+                        <p><a href="brushesandtools.html">Brushes and Tools</a></p>
+
+                        
+                    </div>
+                </div>
+		<a href="gallery.html">Gallery</a>		
+       <a href="usefullinks.html">Useful Links</a>
+       <a href="contact.html">Contact</a>
+             
+            </div>
+             </header>
+             
+        </div>
+    
+        
+
+     
+     
+    <div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+        <hr/>
+        
+ <h2 style="text-align:center">Selection of Makeup Palletes</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="img/naked.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img/naked1.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img/smashbox.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img/smashbox1.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+      <div class="column">
+    <img src="img/seventeen.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+    
+     <div class="column">
+    <img src="img/seventeenopen1.png" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+    
+    <div class="column">
+    <img src="img/zovella.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+    
+    <div class="column">
+    <img src="img/zovellaopen.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+    
+    <div class="column">
+    <img src="img/flomar.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+    
+    
+    <div class="column">
+    <img src="img/smokyeyes.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+    
+     <div class="column">
+    <img src="img/nudedude.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  </div>
+    
+     <div class="column">
+    <img src="img/whitechocolate.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </div>
+    
+    
+     </div>
+ 
+    
+   
+    
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / </div>
+      <img src="img/naked.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / </div>
+      <img src="img/naked1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / </div>
+      <img src="img/smashbox.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / </div>
+      <img src="img/smashbox1.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">5 / </div>
+      <img src="img/seventeen.jpg" style="width:100%">
+    </div>
+      
+        <div class="mySlides">
+      <div class="numbertext">6 / </div>
+      <img src="img/seventeenopen1.png" style="width:100%">
+    </div>
+      
+       <div class="mySlides">
+      <div class="numbertext">7 / </div>
+      <img src="img/zovella.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">8 / </div>
+      <img src="img/zovellaopen.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">9 / </div>
+      <img src="img/flomar.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">10 / </div>
+      <img src="img/smokyeyes.jpg" style="width:100%">
+    </div>
+      
+       <div class="mySlides">
+      <div class="numbertext">11 / </div>
+      <img src="img/nudedude.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">12 / </div>
+      <img src="img/whitechocolate.jpg" style="width:100%">
+    </div>
+      
+      
+      
+     
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="img/naked.jpg" style="width:100%" onclick="currentSlide(1)" alt="Urban Decay Naked Pallete 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/naked1.jpg" style="width:100%" onclick="currentSlide(2)" alt="This pallete contains 12 unique colours that allows users to create various looks">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/smashbox.jpg" style="width:100%" onclick="currentSlide(3)" alt="Smashbox Ultimate Colour Pallete">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/smashbox1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Over 25 unique Colours">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="img/seventeen.jpg" style="width:100%" onclick="currentSlide(5)" alt="Seventeen 2015 Christmas Pallete">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="img/seventeenopen1.png" style="width:100%" onclick="currentSlide(6)" alt="Up to 14 colours!">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="img/zovella.jpg" style="width:100%" onclick="currentSlide(7)" alt="Zovella Pallete">
+    </div>
+        <div class="column">
+      <img class="demo cursor" src="img/zovella.jpg" style="width:100%" onclick="currentSlide(8)" alt="Zovella Pigminted Colours">
+    </div>
+        <div class="column">
+      <img class="demo cursor" src="img/flomar.jpg" style="width:100%" onclick="currentSlide(9)" alt="Flomar Burnt Orange">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="img/smokyeyes.jpg" style="width:100%" onclick="currentSlide(10)" alt="Primark's Smokey Eyes">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="img/nudedude.jpg" style="width:100%" onclick="currentSlide(11)" alt="The Balm Nude Dude Version 2">
+    </div>
+       <div class="column">
+      <img class="demo cursor" src="img/whitechocolate.jpg" style="width:100%" onclick="currentSlide(12)" alt="Revolution White Chocolate Pallete available for less than 10 euro">
+    </div>
+      
+      
+      
+      
+      
+    
+    
+       
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+   
+        
+          
+    </body>
+    
+    <footer>
+        <div class="chip">
+  <img src="img/me.png" alt="Person" width="96" height="96">
+ Created by Shannon McNamara 2016 / <i><a href="sitemap.html">SiteMap</a></i>
+</div>
+    </footer>
+</html>
+                

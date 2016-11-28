@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Contact</title>
+
+        <link rel="stylesheet" type="text/css" href="css/css.css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+        <script type="text/javascript" src="js/js.js"></script>
+      
+  </head>
+    
+    <body>
+        
+         <div class="header">
+             
+      <header>
+            <img src="img/Banner.png" alt="Banner"/> 
+         <div class="navbar">
+        <a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="brands.html">Brands</a>
+                <div class="dropdown">
+                     <span><a href="makeup.html">Make Up</a></span>
+                    <div class="dropdown-content">
+                        <p><a href="face.html">Face Care</a></p>
+                        <p><a href="eyes.html">Eye Palletes</a></p>
+                        <p><a href="lowcost.html">Low Cost Makeup</a></p>
+                        <p><a href="animalcruelty.html">Animal Cruelty</a></p>
+                        <p><a href="brushesandtools.html">Brushes and Tools</a></p>
+
+                        
+                    </div>
+                </div>
+		<a href="gallery.html">Gallery</a>		
+       <a href="usefullinks.html">Useful Links</a>
+       <a href="contact.html">Contact</a>
+             
+            </div>
+             </header>
+             
+          
+             
+        </div>
+        <div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+</body>
+        <hr/>
+    
+    <h1>Contact</h1>
+
+     
+ <p>For any queries please fill in the form below:</p>
+        <div class="form">
+      <form name="myForm" action="mailto:shannon_mcnamara94@hotmail.com" method="post" onsubmit="return validateForm()">
+          
+          <p>Name: <input type="text" name="name"/></p>
+          <p>Email Address: <input type="email" name="email"/></p>
+          <p>Contact: <input type="number" name="contact"/></p>
+          <p>Prefered Method of contact: </p>
+          <p><input type="radio" name="contactBy" value="query">Email</p>
+          <p><input type="radio" name="contactBy" value="other">Phone</p>
+          <p>Comment: <textarea name="comment">Enter text here...</textarea></p>
+          
+          
+          <input type="submit" class="button button4" value="Submit"/>
+          <input type="button" class="button button4" onclick="reset()" value="Reset"/>
+          
+        
+        </form>
+            </div>
+        
+        
+        
+        
+        <div class="map">
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:520px;width:500px;'><div id='gmap_canvas' style='height:450px;width:500px;'></div><div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(52.6680204,-8.630497500000047),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.6680204,-8.630497500000047)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>Limerick, Ireland <br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+        </div>
+        </div>
+        
+     
+
+
+          
+    </body>
+    
+     <footer>
+        <div class="chip">
+  <img src="img/me.png" alt="Person" width="96" height="96">
+ Created by Shannon McNamara 2016 / <i><a href="sitemap.html">SiteMap</a></i>
+</div>
+    </footer>
+</html>
